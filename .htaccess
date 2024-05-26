@@ -1,0 +1,4 @@
+RewriteEngine on
+# https
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URL} [R=301,L]
